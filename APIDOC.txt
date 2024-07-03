@@ -1,0 +1,271 @@
+
+
+1) API for fetching token
+
+    url : http://127.0.0.1:8000/api/token/
+
+    method : post
+
+    body : {username,password}
+
+    authentication : nil
+
+
+=============================================================end=============================================================
+
+
+schema : album
+
+attributes : {
+    title,
+    year,
+    director,
+    language
+}
+
+
+1) API for listing all albums
+
+    url : http://127.0.0.1:8000/api/albums/
+
+    method : post
+
+    body : nil
+
+    authentication : Token
+
+
+2) API for adding all albums
+
+    url : http://127.0.0.1:8000/api/albums/
+
+    method : post
+
+    body : {
+        title,
+        year,
+        director,
+        language
+    }
+
+    authentication : Token
+
+
+3) API for retrieving an album
+
+    url : http://127.0.0.1:8000/api/albums/{id}/
+
+    method : get
+
+    body : nil
+
+    authentication : Token
+
+
+4) API for deleting an album
+
+    url : http://127.0.0.1:8000/api/albums/{id}/
+
+    method : delete
+
+    body : nil
+
+    authentication : Token
+
+
+5) API for updating all albums
+
+    url : http://127.0.0.1:8000/api/albums/{id}/
+
+    method : put
+
+    body : {
+        title,
+        year,
+        director,
+        language
+    }
+
+    authentication : Token
+
+
+=============================================================end album=============================================================
+
+
+schema : album
+
+attributes : {
+    title,
+    singer,
+    genre,
+    duration,
+    track_num,
+    album
+}
+
+
+2) API for adding tracks
+
+    url : http://127.0.0.1:8000/api/albums/{id}/add_track/
+
+    method : post
+
+    body : {
+        title,
+        singer,
+        genre,
+        duration,
+        track_num,
+    }
+
+    authentication : Token
+
+
+2) API for listing all tracks
+
+    url : http://127.0.0.1:8000/api/tracks/
+
+    method : post
+
+    body : nil
+
+    authentication : Token
+
+
+3) API for retrieving an tracks
+
+    url : http://127.0.0.1:8000/api/tracks/{id}/
+
+    method : get
+
+    body : nil
+
+    authentication : Token
+
+
+4) API for deleting an tracks
+
+    url : http://127.0.0.1:8000/api/tracks/{id}/
+
+    method : delete
+
+    body : nil
+
+    authentication : Token
+
+
+5) API for updating all tracks
+
+    url : http://127.0.0.1:8000/api/tracks/{id}/
+
+    method : put
+
+    body : {
+        title,
+        singer,
+        genre,
+        duration,
+        track_num,
+    }
+
+    authentication : Token
+
+
+=============================================================end tracks=============================================================
+
+
+schema : User Register
+
+attributes : {
+              username,
+              email,
+              password,
+              first_name,
+              last_name
+              }
+
+
+1) API for registering a user
+
+    url : http://127.0.0.1:8000/api/register/
+
+    method : post
+
+    body : {
+            username,
+            email,
+            password,
+            first_name,
+            last_name
+            }
+
+    authentication : nil
+
+
+=============================================================end=============================================================
+
+
+schema : Review
+
+attributes : {
+              comment,
+              rating,
+              album,
+              user
+}
+
+
+1) API for adding a review
+
+    url : http://127.0.0.1:8000/api/{id}/reviews/
+
+    method : post
+
+    body : {
+        title,
+        singer,
+        genre,
+        duration,
+        track_num,
+    }
+
+    authentication : Token
+
+
+2) API for updating a review
+
+    url : http://127.0.0.1:8000/api/review_mixin/{id}
+
+    method : put
+
+    body : {
+        title,
+        singer,
+        genre,
+        duration,
+        track_num,
+    }
+
+    authentication : Token
+
+
+3) API for review detail
+
+    url : http://127.0.0.1:8000/api/review_mixin/{id}
+
+    method : get
+
+    body : nil
+
+    authentication : Token
+
+
+4) API for review detail
+
+    url : http://127.0.0.1:8000/api/review_mixin/{id}
+
+    method : delete
+
+    body : nil
+
+    authentication : Token
